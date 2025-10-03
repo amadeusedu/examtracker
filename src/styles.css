@@ -1,0 +1,48 @@
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --brand: #5F4A8B;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+body.dark {
+  --bg: #0b0b0c;
+  --fg: #f3f4f6;
+  --card: #0e0f12;
+  --border: #1f2937;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+.app-shell { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.header { display:flex; align-items:center; gap:12px; justify-content:space-between; }
+.brand { font-weight: 800; color: var(--brand); letter-spacing: 0.3px; }
+.kpis { display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0; }
+.kpi { padding:8px 10px; background: rgba(95,74,139,0.08); border: 1px solid rgba(95,74,139,0.25); border-radius: 8px; font-size: 14px; }
+.card { border:1px solid var(--border); border-radius: 12px; padding: 12px; margin: 10px 0; background: var(--card); }
+.row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding: 10px 0; border-bottom: 1px dashed var(--border); }
+.row:last-child { border-bottom: none; }
+.btn { background: var(--brand); color: white; border:none; padding: 10px 12px; border-radius: 8px; cursor:pointer; font-weight: 600; }
+.btn.secondary { background: transparent; color: var(--brand); border: 1px solid var(--brand); }
+.btn.ghost { background: transparent; color: var(--fg); border: 1px dashed var(--border); }
+.input, .select, .textarea {
+  width: 100%; padding: 10px 12px; border:1px solid var(--border); border-radius:8px; background: transparent; color: var(--fg);
+}
+.grid { display:grid; gap: 8px; align-items:center; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th, .table td { border-bottom: 1px solid var(--border); padding: 8px; text-align:left; }
+.small { color: var(--muted); font-size: 12px; }
+.toggle { display:flex; align-items:center; gap:8px; }
+.badge { padding: 3px 8px; border-radius: 999px; border: 1px solid var(--border); }
+.link { color: var(--brand); text-decoration: none; }
+.flex { display:flex; gap:8px; align-items:center; flex-wrap: wrap; }
+.separator { height:1px; background: var(--border); margin:10px 0; }
+.progress { height: 8px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+.progress > div { height: 100%; background: var(--brand); }
+hl { background: rgba(95,74,139,0.12); padding: 2px 6px; border-radius: 6px; }
